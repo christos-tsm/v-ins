@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "title": "Event 1",
+        "eventDate": "01/10/2022",
+        "location": "Address here",
+        "featuredImageURL": "https://via.placeholder.com/725x290.png",
+        "eventPageURL": "https://www.google.com",
+        "isMoreThanOneDay": false
+    },
+    {
+        "id": 2,
+        "title": "Event 2",
+        "eventDate": "02/13/2022",
+        "location": "Address here",
+        "featuredImageURL": "https://via.placeholder.com/725x290.png",
+        "eventPageURL": "https://www.google.com",
+        "isMoreThanOneDay": false
+    },
+    {
+        "id": 3,
+        "title": "Event 3",
+        "eventDate": "08/21/2022",
+        "location": "Address here",
+        "featuredImageURL": "https://via.placeholder.com/725x290.png",
+        "eventPageURL": "https://www.google.com",
+        "isMoreThanOneDay": false
+    },
+    {
+        "id": 4,
+        "title": "Event 4",
+        "eventDate": "09/13/2022",
+        "location": "Address here",
+        "featuredImageURL": "https://via.placeholder.com/725x290.png",
+        "eventPageURL": "https://www.google.com",
+        "isMoreThanOneDay": false
+    }
+]

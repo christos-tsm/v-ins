@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "title": "Blog Post Title",
+        "content": "Blog post content here",
+        "created_at": "12/05/2022",
+        "postURL": "/",
+        "featuredImageURL": "https://via.placeholder.com/500x280.png"
+    },
+    {
+        "id": 2,
+        "title": "Blog Post Title",
+        "content": "Blog post content here",
+        "created_at": "12/05/2022",
+        "postURL": "/",
+        "featuredImageURL": "https://via.placeholder.com/500x280.png"
+    },
+    {
+        "id": 3,
+        "title": "Blog Post Title",
+        "content": "Blog post content here",
+        "created_at": "12/05/2022",
+        "postURL": "/",
+        "featuredImageURL": "https://via.placeholder.com/500x280.png"
+    },
+    {
+        "id": 4,
+        "title": "Blog Post Title",
+        "content": "Blog post content here",
+        "created_at": "12/05/2022",
+        "postURL": "/",
+        "featuredImageURL": "https://via.placeholder.com/500x280.png"
+    }
+]

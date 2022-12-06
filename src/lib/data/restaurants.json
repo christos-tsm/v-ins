@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "title": "Εστιατόριο 1",
+        "ratings": 4.5,
+        "address": "address 1",
+        "featuredImageURL": "https://via.placeholder.com/100x100.png",
+        "restaurantURL": "/"
+    },
+    {
+        "id": 2,
+        "title": "Εστιατόριο 2",
+        "ratings": 4.5,
+        "address": "address 2",
+        "featuredImageURL": "https://via.placeholder.com/100x100.png",
+        "restaurantURL": "/"
+    },
+    {
+        "id": 3,
+        "title": "Εστιατόριο 3",
+        "ratings": 3,
+        "address": "address 3",
+        "featuredImageURL": "https://via.placeholder.com/100x100.png",
+        "restaurantURL": "/"
+    },
+    {
+        "id": 4,
+        "title": "Εστιατόριο 4",
+        "ratings": 3.7,
+        "address": "address 4",
+        "featuredImageURL": "https://via.placeholder.com/100x100.png",
+        "restaurantURL": "/"
+    },
+    {
+        "id": 5,
+        "title": "Εστιατόριο 5",
+        "ratings": 4.5,
+        "address": "address 5",
+        "featuredImageURL": "https://via.placeholder.com/100x100.png",
+        "restaurantURL": "/"
+    },
+    {
+        "id": 6,
+        "title": "Εστιατόριο 6",
+        "ratings": 4,
+        "address": "address 6",
+        "featuredImageURL": "https://via.placeholder.com/100x100.png",
+        "restaurantURL": "/"
+    }
+]

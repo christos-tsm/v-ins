@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "title": "Ξενοδοχείο 1",
+        "ratings": 4.5,
+        "kmFromCityCenter": 15,
+        "averageDayPrice": 180,
+        "featuredImageURL": "https://via.placeholder.com/460x300.png",
+        "hotelURL": "/"
+    },
+    {
+        "id": 2,
+        "title": "Ξενοδοχείο 2",
+        "ratings": 4.5,
+        "kmFromCityCenter": 1.25,
+        "averageDayPrice": 90,
+        "featuredImageURL": "https://via.placeholder.com/460x300.png",
+        "hotelURL": "/"
+    },
+    {
+        "id": 3,
+        "title": "Ξενοδοχείο 3",
+        "ratings": 3,
+        "kmFromCityCenter": 20,
+        "averageDayPrice": 65,
+        "featuredImageURL": "https://via.placeholder.com/460x300.png",
+        "hotelURL": "/"
+    },
+    {
+        "id": 4,
+        "title": "Ξενοδοχείο 4",
+        "ratings": 3.7,
+        "kmFromCityCenter": 2,
+        "averageDayPrice": 200,
+        "featuredImageURL": "https://via.placeholder.com/460x300.png",
+        "hotelURL": "/"
+    },
+    {
+        "id": 5,
+        "title": "Ξενοδοχείο 5",
+        "ratings": 4.5,
+        "kmFromCityCenter": 4,
+        "averageDayPrice": 180,
+        "featuredImageURL": "https://via.placeholder.com/460x300.png",
+        "hotelURL": "/"
+    },
+    {
+        "id": 6,
+        "title": "Ξενοδοχείο 6",
+        "ratings": 4,
+        "kmFromCityCenter": 9,
+        "averageDayPrice": 180,
+        "featuredImageURL": "https://via.placeholder.com/460x300.png",
+        "hotelURL": "/"
+    }
+]
