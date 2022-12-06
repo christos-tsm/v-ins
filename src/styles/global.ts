@@ -53,4 +53,8 @@ export const GlobalStyle = createGlobalStyle`
         }
     }
 
+    #nprogress .bar {
+        background: ${theme.colors.primary}
+    }
+
 `;

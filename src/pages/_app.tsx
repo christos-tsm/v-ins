@@ -1,35 +1,50 @@
-import 'swiper/css/pagination';
-import 'swiper/css';
-import { useState } from 'react';
-import type { AppProps } from 'next/app'
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { createBrowserSupabaseClient } from '@supabase/auth-helpers-nextjs'
-import { SessionContextProvider } from '@supabase/auth-helpers-react';
+import "swiper/css/pagination";
+import "swiper/css";
+import "nprogress/nprogress.css";
 
-import { GlobalStyle } from '../styles/global';
-import Navigation from '../components/Navigation';
+import { useState, useEffect } from "react";
+import Router from "next/router";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { createBrowserSupabaseClient } from "@supabase/auth-helpers-nextjs";
+import { SessionContextProvider } from "@supabase/auth-helpers-react";
+import NProgress from "nprogress";
+
+import type { AppProps } from "next/app";
+
+import { GlobalStyle } from "../styles/global";
+import Navigation from "../components/Navigation";
 
 export default function App({ Component, pageProps }: AppProps) {
-  const [supabaseClient] = useState(() => createBrowserSupabaseClient());
-  const queryClient = new QueryClient()
+    const [supabaseClient] = useState(() => createBrowserSupabaseClient());
+    const queryClient = new QueryClient();
 
-  return (
-    <>
+    useEffect(() => {
+        const handleRouteStart = () => NProgress.start();
+        const handleRouteDone = () => NProgress.done();
 
-      <SessionContextProvider supabaseClient={supabaseClient}>
+        Router.events.on("routeChangeStart", handleRouteStart);
+        Router.events.on("routeChangeComplete", handleRouteDone);
+        Router.events.on("routeChangeError", handleRouteDone);
 
-        <QueryClientProvider client={queryClient}>
+        return () => {
+            // Make sure to remove the event handler on unmount!
+            Router.events.off("routeChangeStart", handleRouteStart);
+            Router.events.off("routeChangeComplete", handleRouteDone);
+            Router.events.off("routeChangeError", handleRouteDone);
+        };
+    }, []);
 
-          <GlobalStyle />
+    return (
+        <>
+            <SessionContextProvider supabaseClient={supabaseClient}>
+                <QueryClientProvider client={queryClient}>
+                    <GlobalStyle />
 
-          <Navigation />
+                    <Navigation />
 
-          <Component {...pageProps} />
-
-        </QueryClientProvider>
-
-      </SessionContextProvider>
-
-    </>
-  )
+                    <Component {...pageProps} />
+                </QueryClientProvider>
+            </SessionContextProvider>
+        </>
+    );
 }
