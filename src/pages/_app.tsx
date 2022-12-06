@@ -4,6 +4,7 @@ import "nprogress/nprogress.css";
 
 import { useState, useEffect } from "react";
 import Router from "next/router";
+import { Scrollbars } from "rc-scrollbars";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { createBrowserSupabaseClient } from "@supabase/auth-helpers-nextjs";
 import { SessionContextProvider } from "@supabase/auth-helpers-react";
@@ -39,10 +40,10 @@ export default function App({ Component, pageProps }: AppProps) {
             <SessionContextProvider supabaseClient={supabaseClient}>
                 <QueryClientProvider client={queryClient}>
                     <GlobalStyle />
-
                     <Navigation />
-
-                    <Component {...pageProps} />
+                    <Scrollbars style={{ height: "100vh" }} universal>
+                        <Component {...pageProps} />
+                    </Scrollbars>
                 </QueryClientProvider>
             </SessionContextProvider>
         </>
