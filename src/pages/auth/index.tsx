@@ -6,8 +6,9 @@ import { Auth, ThemeSupa } from '@supabase/auth-ui-react';
 import { createServerSupabaseClient } from '@supabase/auth-helpers-nextjs'
 import { GetServerSidePropsContext } from 'next'
 import Layout from '../../components/Layout';
-import { AuthContainer } from './styles';
+import { AuthCard, AuthContainer } from './styles';
 import { Header } from '../../styles/typography';
+import { authTheme } from '../../styles/theme';
 
 const Login: NextPage = () => {
     const supabaseClient = useSupabaseClient();
@@ -18,12 +19,33 @@ const Login: NextPage = () => {
         router.push('/');
     }
 
+    console.log(router);
+
     return (
         <AuthContainer>
-            <Header>
 
-            </Header>
-            <Auth appearance={{ theme: ThemeSupa }} supabaseClient={supabaseClient} />
+            <AuthCard>
+
+                <Header>Καλώς ήρθατε ξανά!</Header>
+
+                <hr />
+
+                <Auth
+                    theme='default'
+                    appearance={{ theme: authTheme }}
+                    supabaseClient={supabaseClient}
+                    localization={{
+                        variables: {
+                            sign_in: {
+                                email_label: 'Διεύθυνση email',
+                                password_label: 'Κωδικός',
+                            },
+                        },
+                    }}
+                />
+
+            </AuthCard>
+
         </AuthContainer>
     )
 }

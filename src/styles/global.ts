@@ -57,4 +57,28 @@ export const GlobalStyle = createGlobalStyle`
         background: ${theme.colors.primary}
     }
 
+    .supabase-ui-auth_ui-input {
+        outline: none;
+        border: none;
+        padding: 10px 15px;
+        margin-top: 10px;
+        border: 1px solid #f5f5f5;
+        transition: all ease-in-out 250ms;
+        border-radius: 5px;
+
+        &:focus {
+            border-color: ${theme.colors.primary};
+        }
+    }
+
+    .supabase-ui-auth_ui-button {
+        padding: 10px 15px;
+        border-radius: 12px;
+        transition: all ease-in-out 250ms;
+
+        &:hover {
+            border-radius: 0;
+        }
+    }
+
 `;

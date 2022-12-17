@@ -6,3 +6,13 @@ export const theme = {
         lightGray: "#9691a4"
     }
 }
+
+export const authTheme = {
+    default: {
+        colors: {
+            brand: theme.colors.primary,
+            brandAccent: theme.colors.primary,
+            brandButtonText: '#fff',
+        }
+    }
+}
