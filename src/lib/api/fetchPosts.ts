@@ -1,13 +1,13 @@
-import axios from 'axios';
+import axios from "axios";
 
 const postsAPI = axios.create({
-    baseURL: 'https://www.euro2day.gr/',
+    baseURL: "https://www.euro2day.gr/",
     headers: {
-        'Access-Control-Allow-Origin': '*'
-    }
-})
+        // 'Access-Control-Allow-Origin': '*'
+    },
+});
 
 export const fetchPosts = async () => {
-    const response = await postsAPI.get('/rss.ashx?catid=121');
+    const response = await postsAPI.get("/rss.ashx?catid=121");
     return response.data;
-}
+};

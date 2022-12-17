@@ -40,7 +40,6 @@ export default function App({ Component, pageProps }: AppProps) {
             <SessionContextProvider supabaseClient={supabaseClient}>
                 <QueryClientProvider client={queryClient}>
                     <GlobalStyle />
-                    <Navigation />
                     <Scrollbars style={{ height: "100vh" }} universal>
                         <Component {...pageProps} />
                     </Scrollbars>

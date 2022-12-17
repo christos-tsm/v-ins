@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import { theme } from '../../styles/theme';
+import styled from "styled-components";
+import { theme } from "../../styles/theme";
 
-export const NavigationContainer = styled.div`
+export const NavigationContainer = styled.header`
     max-width: 100%;
     display: flex;
     justify-content: space-between;
@@ -15,7 +15,7 @@ export const NavigationContainer = styled.div`
     border-radius: 20px;
     width: 1480px;
     z-index: 90;
-    box-shadow: 0 .125rem .5rem -.25rem #1f1b2d1f,0 .25rem 1rem #1f1b2d1f;
+    box-shadow: 0 0.125rem 0.5rem -0.25rem #1f1b2d1f, 0 0.25rem 1rem #1f1b2d1f;
 `;
 
 export const MenuUL = styled.ul`

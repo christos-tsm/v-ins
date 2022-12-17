@@ -1,14 +1,14 @@
-import React from 'react'
-import Layout from '../../components/Layout'
+import React from "react";
+import AppLayout from "../../components/Layouts/AppLayout";
 
 const VolosApp = () => {
     return (
-        <Layout>
+        <AppLayout>
             <div>
-                <h1>App</h1>
+                <h2>Trending</h2>
             </div>
-        </Layout>
-    )
-}
+        </AppLayout>
+    );
+};
 
-export default VolosApp
+export default VolosApp;

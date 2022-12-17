@@ -3,7 +3,7 @@ import { TbDots } from "react-icons/tb";
 import { BiPhoneCall } from "react-icons/bi";
 import { useQuery } from "@tanstack/react-query";
 
-import Layout from "../components/Layout";
+import GuestLayout from "../components/Layouts/GuestLayout";
 import PageHero from "../components/PageHero";
 import CategoryBox from "../components/CategoryBox";
 import SliderHotels from "../components/Sliders/SliderHotels";
@@ -42,39 +42,74 @@ const Home = ({ initialSession }: any) => {
                 <title>iVolos Community | Ανακαλύψτε την πόλη μας</title>
             </Head>
 
-            <Layout>
+            <GuestLayout>
                 <TextureTriangleContainer>
                     <TextureTriangle />
                 </TextureTriangleContainer>
 
-                <PageHero header="Καλως ηρθατε στο Volos Ins!" subheader="Βρείτε ό,τι ψάχνετε, στην αγαπημένη μας πόλη!" paragraph="Επαγγελματίες της πόλης, εστιατόρια, καφετέριες, εκδηλώσεις, αγγελίες και ό,τι άλλο μπορείς να φανταστείς, σε περιμένει να τα ανακαλύψεις!" cta="Εγγραφή" />
+                <PageHero
+                    header="Καλως ηρθατε στο Volos Ins!"
+                    subheader="Βρείτε ό,τι ψάχνετε, στην αγαπημένη μας πόλη!"
+                    paragraph="Επαγγελματίες της πόλης, εστιατόρια, καφετέριες, εκδηλώσεις, αγγελίες και ό,τι άλλο μπορείς να φανταστείς, σε περιμένει να τα ανακαλύψεις!"
+                    cta="Εγγραφή"
+                />
 
                 <Section padding="0 0 20px" margin="80px auto">
                     <FlexContainer gap={50}>
                         {boxes.map((box) => (
-                            <CategoryBox key={box.id} title={box.title} url={box.url} />
+                            <CategoryBox
+                                key={box.id}
+                                title={box.title}
+                                url={box.url}
+                            />
                         ))}
 
-                        <CategoryBox title={"Περισσότερα"} icon={<TbDots size={18} />} />
+                        <CategoryBox
+                            title={"Περισσότερα"}
+                            icon={<TbDots size={18} />}
+                        />
                     </FlexContainer>
                 </Section>
 
                 <Section padding="0 0 100px">
-                    <SliderHotels sliderTitle="Ξενοδοχεία της περιοχής" data={hotels} />
+                    <SliderHotels
+                        sliderTitle="Ξενοδοχεία της περιοχής"
+                        data={hotels}
+                    />
                 </Section>
 
                 <Section padding="0 0 100px">
                     <FlexContainer gap={50} className="__1-2--flex">
-                        <PromotionBanner title="Taxi" phone="488" titleIcon={<BiPhoneCall />} description="Δίπλα σου, με ένα τηλεφώνημα!" svg={<TaxiBanner />} minHeight={540} />
+                        <PromotionBanner
+                            title="Taxi"
+                            phone="488"
+                            titleIcon={<BiPhoneCall />}
+                            description="Δίπλα σου, με ένα τηλεφώνημα!"
+                            svg={<TaxiBanner />}
+                            minHeight={540}
+                        />
 
                         <div>
                             <SubHeader capitalize black xl mb={40}>
                                 Εστιατόρια στον Βόλο
                             </SubHeader>
 
-                            <GridContainer gap={50} columns={2} columnWidth={"1fr"}>
+                            <GridContainer
+                                gap={50}
+                                columns={2}
+                                columnWidth={"1fr"}
+                            >
                                 {restaurants.map((restaurant) => (
-                                    <LogoCard key={restaurant.id} title={restaurant.title} address={restaurant.address} ratings={restaurant.ratings} restaurantURL={restaurant.restaurantURL} featuredImageURL={restaurant.featuredImageURL} />
+                                    <LogoCard
+                                        key={restaurant.id}
+                                        title={restaurant.title}
+                                        address={restaurant.address}
+                                        ratings={restaurant.ratings}
+                                        restaurantURL={restaurant.restaurantURL}
+                                        featuredImageURL={
+                                            restaurant.featuredImageURL
+                                        }
+                                    />
                                 ))}
                             </GridContainer>
                         </div>
@@ -83,22 +118,47 @@ const Home = ({ initialSession }: any) => {
 
                 <BGLight marginY="0 0 100px">
                     <Section padding="100px 0 100px">
-                        <SliderEvents sliderTitle="Επερχόμενες εκδηλώσεις" data={events} slidesPerView={2} spaceBetween={0} />
+                        <SliderEvents
+                            sliderTitle="Επερχόμενες εκδηλώσεις"
+                            data={events}
+                            slidesPerView={2}
+                            spaceBetween={0}
+                        />
                     </Section>
                 </BGLight>
 
                 <Section padding="0 0 100px">
                     <FlexContainer gap={50} className="__1-2--flex" reversed>
-                        <PromotionBanner title="Lorem Ipsum" phone="588" titleIcon={<BiPhoneCall />} description="Lorem ipsum dolor amet." svg={<MuseumBanner />} minHeight={540} />
+                        <PromotionBanner
+                            title="Lorem Ipsum"
+                            phone="588"
+                            titleIcon={<BiPhoneCall />}
+                            description="Lorem ipsum dolor amet."
+                            svg={<MuseumBanner />}
+                            minHeight={540}
+                        />
 
                         <div>
                             <SubHeader capitalize black xl mb={40}>
                                 Πολιτισμός & δραστηριότητες στον Βόλο
                             </SubHeader>
 
-                            <GridContainer gap={50} columns={3} columnWidth={"1fr"}>
+                            <GridContainer
+                                gap={50}
+                                columns={3}
+                                columnWidth={"1fr"}
+                            >
                                 {restaurants.map((restaurant) => (
-                                    <LogoCard key={restaurant.id} title={restaurant.title} address={restaurant.address} ratings={restaurant.ratings} restaurantURL={restaurant.restaurantURL} featuredImageURL={restaurant.featuredImageURL} />
+                                    <LogoCard
+                                        key={restaurant.id}
+                                        title={restaurant.title}
+                                        address={restaurant.address}
+                                        ratings={restaurant.ratings}
+                                        restaurantURL={restaurant.restaurantURL}
+                                        featuredImageURL={
+                                            restaurant.featuredImageURL
+                                        }
+                                    />
                                 ))}
                             </GridContainer>
                         </div>
@@ -106,11 +166,15 @@ const Home = ({ initialSession }: any) => {
                 </Section>
 
                 <Section padding="0 0 100px">
-                    <SliderPosts sliderTitle="Τι νέο υπάρχει στον Βόλο" data={posts} slidesPerView={1} />
+                    <SliderPosts
+                        sliderTitle="Τι νέο υπάρχει στον Βόλο"
+                        data={posts}
+                        slidesPerView={1}
+                    />
                 </Section>
 
                 <FooterBanner />
-            </Layout>
+            </GuestLayout>
         </>
     );
 };
