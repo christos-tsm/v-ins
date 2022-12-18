@@ -1,5 +1,11 @@
 import React from "react";
-import Document, { Html, Head, Main, NextScript, DocumentContext } from "next/document";
+import Document, {
+    Html,
+    Head,
+    Main,
+    NextScript,
+    DocumentContext,
+} from "next/document";
 
 class MyDocument extends Document {
     static async getInitialProps(ctx: DocumentContext) {
@@ -14,10 +20,15 @@ class MyDocument extends Document {
         return (
             <Html lang="en">
                 <Head>
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-                    <link rel="preconnect" href="https://fonts.googleapis.com" />
+                    <link
+                        rel="preconnect"
+                        href="https://fonts.googleapis.com"
+                    />
                     <link rel="preconnect" href="https://fonts.gstatic.com" />
-                    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+                    <link
+                        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&display=swap"
+                        rel="stylesheet"
+                    />
                 </Head>
                 <body>
                     <Main />

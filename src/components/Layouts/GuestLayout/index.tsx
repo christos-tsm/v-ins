@@ -1,3 +1,4 @@
+import Head from "next/head";
 import React from "react";
 import { PropsChildren } from "../../../types/main";
 import FooterGuest from "../../Footer/FooterGuest";
