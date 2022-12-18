@@ -33,7 +33,7 @@ export const GlobalStyle = createGlobalStyle`
 
     .header--scrolled {
         top: 20px;
-        box-shadow: 0 0.125rem 0.5rem -0.25rem #1f1b2d1f, 0 0.25rem 1rem #1f1b2d1f;
+        box-shadow: ${theme.shadow.primary};
     }
 
     .swiper-pagination {
@@ -63,27 +63,23 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     .supabase-ui-auth_ui-input {
-        outline: none;
-        border: none;
-        padding: 10px 15px;
-        margin-top: 10px;
-        border: 1px solid #f5f5f5;
+        outline: none !important;
+        border: none !important;
+        padding: 10px 15px !important; 
+        margin-top: 10px !important;
+        border: 1px solid #f5f5f5 !important;
         transition: all ease-in-out 250ms;
         border-radius: 5px;
 
         &:focus {
-            border-color: ${theme.colors.primary};
+            border-color: ${theme.colors.primary} !important;
         }
     }
 
     .supabase-ui-auth_ui-button {
-        padding: 10px 15px;
-        border-radius: 12px;
+        padding: 10px 15px !important;
+        border-radius: 12px !important;
         transition: all ease-in-out 250ms;
-
-        &:hover {
-            border-radius: 0;
-        }
     }
 
 `;

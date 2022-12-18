@@ -9,6 +9,7 @@ import Layout from "../../components/Layouts/GuestLayout";
 import { AuthCard, AuthContainer } from "./styles";
 import { Header } from "../../styles/typography";
 import { authTheme } from "../../styles/theme";
+import Navigation from "../../components/Navigation";
 
 const Login: NextPage = () => {
     const supabaseClient = useSupabaseClient();
@@ -22,28 +23,35 @@ const Login: NextPage = () => {
     }
 
     return (
-        <AuthContainer>
-            <AuthCard>
-                <Header>Καλώς ήρθατε ξανά!</Header>
+        <>
+            <Navigation />
+            <AuthContainer>
+                <AuthCard>
+                    <Header>Καλώς ήρθατε ξανά!</Header>
 
-                <hr />
+                    <hr />
 
-                <Auth
-                    theme="default"
-                    appearance={{ theme: authTheme }}
-                    supabaseClient={supabaseClient}
-                    redirectTo="http://localhost:3000/app"
-                    localization={{
-                        variables: {
-                            sign_in: {
-                                email_label: "Διεύθυνση email",
-                                password_label: "Κωδικός",
+                    <Auth
+                        theme="default"
+                        appearance={{ theme: authTheme }}
+                        supabaseClient={supabaseClient}
+                        redirectTo="http://localhost:3000/app"
+                        localization={{
+                            variables: {
+                                sign_in: {
+                                    email_label: "Διεύθυνση email",
+                                    password_label: "Κωδικός",
+                                },
+                                sign_up: {
+                                    email_label: "Διεύθυνση email",
+                                    password_label: "Κωδικός"
+                                }
                             },
-                        },
-                    }}
-                />
-            </AuthCard>
-        </AuthContainer>
+                        }}
+                    />
+                </AuthCard>
+            </AuthContainer>
+        </>
     );
 };
 

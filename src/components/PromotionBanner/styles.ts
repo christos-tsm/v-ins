@@ -8,13 +8,27 @@ type PromotionBannerTypes = {
 
 export const PromotionBannerContainer = styled.article`
     display: flex;
+    position: relative;
     flex-direction: column;
     padding: 0;
     border-radius: 15px;
     justify-content: space-around;
-    background-color: ${theme.colors.primaryLighten};
+    background-color: #fff;
+    box-shadow: ${theme.shadow.primary};
     min-height: ${({ minHeight }: PromotionBannerTypes) => `${minHeight}px`};
     width: ${({ width }: PromotionBannerTypes) => width};
+
+    /* &::before {
+        content: '';
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+        background-color: ${theme.colors.primary};
+        z-index: -1;
+    } */
 
 `;
 
