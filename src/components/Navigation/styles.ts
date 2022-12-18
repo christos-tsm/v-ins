@@ -15,7 +15,9 @@ export const NavigationContainer = styled.header`
     border-radius: 20px;
     width: 1480px;
     z-index: 90;
-    box-shadow: 0 0.125rem 0.5rem -0.25rem #1f1b2d1f, 0 0.25rem 1rem #1f1b2d1f;
+    /* box-shadow: 0 0.125rem 0.5rem -0.25rem #fff, 0 0.25rem 1rem #fff; */
+    box-shadow: 0 0 0 0 transparent;
+    transition: all ease-in-out 250ms;
 `;
 
 export const MenuUL = styled.ul`

@@ -43,9 +43,9 @@ const Home = ({ initialSession }: any) => {
             </Head>
 
             <GuestLayout>
-                <TextureTriangleContainer>
+                {/* <TextureTriangleContainer>
                     <TextureTriangle />
-                </TextureTriangleContainer>
+                </TextureTriangleContainer> */}
 
                 <PageHero
                     header="Καλως ηρθατε στο Volos Ins!"

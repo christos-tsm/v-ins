@@ -31,6 +31,11 @@ export const GlobalStyle = createGlobalStyle`
         margin: auto;
     }
 
+    .header--scrolled {
+        top: 20px;
+        box-shadow: 0 0.125rem 0.5rem -0.25rem #1f1b2d1f, 0 0.25rem 1rem #1f1b2d1f;
+    }
+
     .swiper-pagination {
         display: flex;
         justify-content: center;

@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useSupabaseClient, useUser } from "@supabase/auth-helpers-react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { ItemList, ItemListButton, MenuUL, NavigationContainer } from "./styles";
 
 const Navigation = () => {
+    const [isScrolled, setIsScrolled] = useState(false);
     const supabaseClient = useSupabaseClient();
     const user = useUser();
     const router = useRouter();
@@ -14,9 +15,26 @@ const Navigation = () => {
         router.push("/");
     };
 
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.document.documentElement.scrollTop > 150) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
-        <NavigationContainer>
+        <NavigationContainer className={isScrolled ? 'header--scrolled' : ''}>
             <div className="logo">
+
                 <Link href={"/"}>
                     <svg width="63" height="15" viewBox="0 0 63 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
